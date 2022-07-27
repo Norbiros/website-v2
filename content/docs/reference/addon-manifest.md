@@ -679,3 +679,29 @@ Example:
   }
 }
 ```
+
+## `seeAlso`
+
+| | |
+| - | - |
+| Type | `Object` |
+
+Provides information to the settings page about similar addons or addons that you can use with this addon. It is used in `See also:` information in addons, and in `Suggested for you` category.
+
+Sub-properties:
+- `addon` (string, required) The `id` of another addon. 
+- `description` (string, optional) Short description (up to 15 words) about another addon, if it is not specified it uses first sentence of description of another addon.
+- `showInList` (boolean, optional)  Whether or not refered addon should be in `Suggested for you` list. Defaults to `true`.
+
+Example:
+```json
+{
+  "seeAlso": [
+    {
+      "addon": "move-to-top-bottom",
+      "description": "To move costume or sound to top or bottom of list.",
+      "showInList": false
+    }
+  ],
+}
+```
